@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
+ 
+    <script>
+      // ensure the web page (DOM) has loaded
+      document.addEventListener("DOMContentLoaded", function () {
+ 
+         // Create a popcorn instance by calling the Vimeo player plugin
+         var pop = Popcorn.vimeo(
+         '#video',
+         'http://player.vimeo.com/video/102282423');
+ 
+         // add a footnote at 2 seconds, and remove it at 6 seconds
+    pop.footnote({
+        start: 443,
+        text: "<p><strong>Further Learning:</strong> - Lecture 5 – Tachycardia & Re-Entry - Medical Science Journal – “Understanding & Treating Cardiovascular Conditions”, 2004</p>",
+        target: "footnote-div"
+    }).footnote({
+        start: 443,
+        text: "<p><a href=\"#\" seekTo=\"443\" id=\"clicky\" class=\"time\">7:23</a><strong>Remember:</strong> Hypertrophy refers to the number of myofibrils increasing. This causes myocytes to increase in size but now quantity.</p>",
+        target: "footnote-div"
+    }).footnote({
+        start: 425,
+        text: "<p><a href=\"#\" seekTo=\"425\" id=\"clicky\" class=\"time\">7:05</a>Stenosis can be caused by aging or a malformed valve. Explore the different types of stenosis <a href=\"http://www.heart.org/HEARTORG/Conditions/More/HeartValveProblemsandDisease/Problem-Heart-Valve-Stenosis_UCM_450369_Article.jsp\" target=\"_blank\">here</a>.</p>",
+        target: "footnote-div"
+    }).footnote({
+        start: 404,
+        text: "<p><a href=\"#\" seekTo=\"404\" id=\"clicky\" class=\"time\">6:44</a><em>Ischemia:</em> A restriction in blood supply to tissue and causing a deficiency in oxygen and glucose required for cellular metabolism.</p>",
+        target: "footnote-div"
+    }).footnote({
+        start: 340,
+        text: "<p><a href=\"#\" seekTo=\"340\" id=\"clicky\" class=\"time\">5:40</a>Aneurysm: A localized bulge in the wall of a bloodvessel (think dilation).</p>",
+        target: "footnote-div"
+    }).footnote({
+        start: 296,
+        text: "<p><a href=\"#\" seekTo=\"296\" id=\"clicky\" class=\"time\">4:56</a>The total wire force changes in order to maintain the force equilibrium of the vertical components.</p>",
+        target: "footnote-div"
+    }).footnote({
+        start: 226,
+        text: "<p><a href=\"#\" seekTo=\"226\" id=\"clicky\" class=\"time\">3:46</a>When would the heart’s wall thickness increase? Stay tuned…</p>",
+        target: "footnote-div"
+    }).footnote({
+        start: 116,
+        text: "<p><a href=\"#\" seekTo=\"116\" id=\"clicky\" class=\"time\">1:56</a>In this case, equilibrium also exists in the horizontal direction.</p>",
+        target: "footnote-div"
+    }).footnote({
+        start: 43,
+        text: "<p><a href=\"#\" seekTo=\"43\" id=\"clicky\" class=\"time\">0:43</a>Force arrows indicate both the direction of stress and type of stress occurring. Learn more <a href=\"http://en.wikipedia.org/wiki/Stress_%28mechanics%29\" target= \"_blank\">here</a>.</p>",
+        target: "footnote-div"
+    }).footnote({
+        start: 0,
+        text: "<p>Look here for helpful learning tips during the podcast.</p>",
+        target: "footnote-div"
+    });
+
+ 
+         // play the video right away
+         pop.play();
+ 
+      }, false);
+    </script>
+  </head>
+  <body>
+    <div id="video" style="width: 360px; height: 300px;" ></div>
+    <div id="footnote-div"></div>
+  </body>
+</html>
