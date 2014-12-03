@@ -1,0 +1,158 @@
+header{
+	background: #002145;
+}
+body{
+	background-image: url('../images/Pacemaker.jpg');
+}
+/*refactor:
+* get proper header logo size and src
+*
+*/
+.header-logo{
+	height:50px;
+	padding:5px;
+}
+header h2{
+	margin:16px 170px 0 0;
+	float:right;
+	color:#FFF;
+	font-size: 25px;
+}
+.front-page-img{
+	width: 100%;
+	height: auto;
+}
+.org{
+	display:inline;
+	padding-left:10px;
+	color:#FFF;
+	font-size: 30px;
+	vertical-align: middle;
+}
+.bottom-shadow{
+	-webkit-box-shadow: 0px 0px 8px 2px #000000;
+	-moz-box-shadow: 0px 0px 8px 2px #000000;
+	box-shadow: 0px 0px 8px 2px #000000;
+}
+
+.responsive-media {
+	position: relative;
+	padding-bottom: 56.25%;
+	overflow: hidden;
+}
+
+
+.responsive-media iframe,
+.responsive-media object,
+.responsive-media embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.main-content{
+	height:100%;
+}
+.time{
+	background: #FFF;
+	background: rgba(255, 255, 255, 0.6);
+	display: inline-block;
+	padding: 3px;
+	margin-right: 5px;
+	color: #000;
+	border-radius: 1px;
+	box-shadow: -1px -1px 1px 1px #ccc;
+}
+.time:hover{
+	color: #fff;
+	background: rgba(255, 255, 255, 0.3);
+	border-radius: 1px;
+	box-shadow: 0px 0px 0px 1px #fff;
+}
+
+.notes li{
+	border-bottom:1px solid #CCC;
+	color:#d2d2d2;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 7px;
+	margin: 1px 0;	
+	position: relative;
+	list-style-type:none;
+}
+.notes .current{
+  border:1px solid black;
+  background:rgba(155, 155, 155, 0.5);;
+  border-radius:2px;
+  padding:5px;
+  color:#FFF;
+}
+
+.panel-btn{
+	position:absolute;
+	top:10px;
+	right:10px;
+	background:#FFF;
+	padding:15px;
+	border-radius:3px;
+}
+#close-panel-top-bt,
+#close-panel-btm-bt{
+	color:#000;
+}
+
+.panel {
+  display: none;
+  width: 320px;
+  padding: 0px;
+  background-color: #333;
+  color: #fff;
+  box-shadow: inset 0 0 5px 5px #222;
+  overflow:auto;
+}
+
+#notification{
+	position:fixed;
+	right:5px;
+	top:55px;
+	height:52px;
+	//background:url("../images/notification-icon.gif") top left no-repeat;
+	z-index:1;
+}
+
+
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
+}

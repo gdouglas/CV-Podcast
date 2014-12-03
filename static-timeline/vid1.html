@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Abes Takes</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="container-fluid">
+    <header class="row bottom-shadow">
+      <img src="images/ubc-logo.png" class="header-logo">
+      <h1 class="org">UBC - Cardiovascular Podcasts</h1>
+      <h2>Wall Stress</h2>
+    </header>
+    <div class="row main-content">
+      <a id="right-panel-link" href="#right-panel" class="panel-btn">Open right panel</a>
+      <div class="responsive-media" id="video">
+
+        <iframe src="//player.vimeo.com/video/102282423?autoplay=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+
+      </div>
+    </div>
+
+
+
+
+    
+  <div id="right-panel" class="panel">
+    <button id="close-panel-top-bt">Close</button>
+          <ul class="notes">
+        <li><strong>Further Learning:</strong> - Lecture 5 – Tachycardia & Re-Entry - Medical Science Journal – “Understanding & Treating Cardiovascular Conditions”, 2004</li>
+        <li><a href="#" seekTo="443" id="clicky" class="time">7:23</a><strong>Remember:</strong> Hypertrophy refers to the number of myofibrils increasing. This causes myocytes to increase in size but now quantity.</li>
+        <li><a href="#" seekTo="425" id="clicky" class="time">7:05</a>Stenosis can be caused by aging or a malformed valve. Explore the different types of stenosis <a href="http://www.heart.org/HEARTORG/Conditions/More/HeartValveProblemsandDisease/Problem-Heart-Valve-Stenosis_UCM_450369_Article.jsp" target="_blank">here</a>.</li>
+        <li><a href="#" seekTo="404" id="clicky" class="time">6:44</a><em>Ischemia:</em> A restriction in blood supply to tissue and causing a deficiency in oxygen and glucose required for cellular metabolism.</li>
+        <li><a href="#" seekTo="340" id="clicky" class="time">5:40</a>Aneurysm: A localized bulge in the wall of a bloodvessel (think dilation).</li>
+        <li><a href="#" seekTo="296" id="clicky" class="time">4:56</a>The total wire force changes in order to maintain the force equibrium of the vertical components.</li>
+        <li><a href="#" seekTo="226" id="clicky" class="time">3:46</a>When would the heart’s wall thickness increase? Stay tuned…</li>
+        <li><a href="#" seekTo="116" id="clicky" class="time">1:56</a>In this case, equilibrium also exists in the horizontal direction.</li>
+        <li><a href="#" seekTo="43"  id="clicky" class="time">0:43</a>Force arrows indicate both the direction of stress and type of stress occurring. Learn more <a href="http://en.wikipedia.org/wiki/Stress_%28mechanics%29" target= "_blank">here</a>.</li>
+      </ul>
+    <button id="close-panel-btm-bt">Close</button>
+    
+  </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/jquery.panelslider.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/podcast.js"></script>
+
+
+
+  <script>
+
+    $('#right-panel-link').panelslider({side: 'right', clickClose: false, duration: 200 });
+
+    $('#close-panel-btm-bt').click(function() {
+      $.panelslider.close();
+    });
+    $('#close-panel-top-bt').click(function() {
+      $.panelslider.close();
+    });
+  </script>
+
+
+
+
+  </body>
+</html>
