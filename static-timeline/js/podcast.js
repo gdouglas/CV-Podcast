@@ -100,9 +100,7 @@ function closest (num, arr) {
               item = curr;
               addHighlight(curr);
             }else {
-              //check if the item is past the playhead and remove it if it is
-              console.log ("in else statement item is "+item+" and num is "+num);
-              if (item < num-10){
+              if (item < num-10 || item > num+10){
               console.log ("inside if item is "+item+" and num is "+num);
                 removeHighlight(curr);
               }
