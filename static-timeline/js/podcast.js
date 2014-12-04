@@ -6,7 +6,7 @@ var foo = $('#status'),
     item = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
-    $("a").click(function() {
+    $(".notes a").click(function() {
         postToiFrame("seekTo", $(this).attr('seekTo'));
         return false;
     });
@@ -26,11 +26,8 @@ $('.time').each(function(){
 function postToiFrame(action, val) {
   var data = { method: action };
   data.value = val;
-  //console.log(data);
   $("#video iframe") [0].contentWindow.postMessage(JSON.stringify(data), "http://player.vimeo.com/video/111773854");
 }
-
-
 
 // Listen for messages from the player
 if (window.addEventListener){
@@ -101,7 +98,6 @@ function closest (num, arr) {
               addHighlight(curr);
             }else {
               if (item < num-10 || item > num+10){
-              console.log ("inside if item is "+item+" and num is "+num);
                 removeHighlight(curr);
               }
             }
@@ -114,27 +110,14 @@ function addHighlight(inx){
   $('.time').each(function(){
         var seekTo = $(this).attr('seekTo');
       if(seekTo === inx){
-        //console.log(inx+"seek = "+seekTo);
         $(this).parent().addClass("current");
         if (icon == false){
-          //console.log('icon = '+icon+" add Highlight");
           icon = true;
-          $('.main-content').append("<a id='notification'><img class='animated zoomIn' src='./images/notification-icon.gif'></a>");
+          //$('.main-content').append("<a id='notification'><img class='animated zoomIn' src='./images/notification-icon.gif'></a>");
+          $('#right-panel-link').addClass("notification");
         }else if(icon ===true){
-          //console.log(inx+"seek = "+seekTo);
-          //removeHighlight(inx);
+
         }
-
-        /*if ($('#notification').length != 0){
-          console.log("length is true");
-        }else{
-          console.log("adding notification and length ="+$('#notification').length);
-          $('.main-content').prepend("<a id='notification'><img src='./images/notification-icon.gif'></a>");
-           //class='animated zoomIn'
-        }*/
-
-
-
       }else{
         $(this).parent().removeClass("current");
       }
@@ -145,9 +128,9 @@ function removeHighlight(inx){
   $('.time').each(function(){
         $(this).parent().removeClass("current");
         if (icon){
-          $('#notification').remove();
+          $('#right-panel-link').removeClass("notification");
+          //$('#notification').remove();
           icon = false;
-          //console.log('icon = '+icon+" remove Highlight");
         }
   });   
 }//end removeHighlight
